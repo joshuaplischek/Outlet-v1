@@ -43,21 +43,21 @@
     },
     {
         "id": "b001",
-        "name": "Balkontür 90x210cm Anthrazit",
+        "name": "Balkontür Weiß 97,5x223,5cm",
         "category": "Balkontür",
         "price": 599,
         "images": [
-            "assets/images/products/balkon-1.jpg"
+            "/assets/img/products/balkon/balkon 01/1.png"
         ],
-        "condition": "Neuwertig - Rückläufer",
-        "description": "Moderne Balkontür in Anthrazit mit Sicherheitsverglasung. Inklusive Griff und Beschlägen.",
+        "condition": "Neu - Fehlbestellung",
+        "description": "Große Balkontür mit 2-fach Verglasung. Ideal für Wohnräume.",
         "specifications": {
-            "Breite": "90 cm",
-            "Höhe": "210 cm",
-            "Verglasung": "3-fach Sicherheitsglas",
+            "Breite": "97,5 cm",
+            "Höhe": "223,5 cm",
+            "Verglasung": "2-fach",
             "Material": "Kunststoff",
-            "Farbe": "Anthrazit",
-            "U-Wert": "0.8 W/(m²K)"
+            "Farbe": "Weiß",
+            "U-Wert": "1,26 W/(m²K)"
         },
         "pos": 3,
         "available": true
