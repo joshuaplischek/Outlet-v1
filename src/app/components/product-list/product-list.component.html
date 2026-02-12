@@ -1,0 +1,30 @@
+<section class="product-list section" id="outlet">
+    <div class="container">
+        <h2 class="section-title text-center mb-lg">Unser Outlet</h2>
+
+        <div class="filters mb-xl">
+            <button *ngFor="let filter of filters" class="filter-btn" [class.active]="selectedFilter === filter.value"
+                (click)="filterProducts(filter.value)">
+                {{ filter.label }}
+            </button>
+        </div>
+
+        <div class="products-grid">
+            <app-product-card *ngFor="let product of products$ | async" [product]="product"
+                (click)="openProductDetail(product)">
+            </app-product-card>
+        </div>
+
+        <div class="empty-state" *ngIf="(products$ | async)?.length === 0">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+            </svg>
+            <h3>Keine Produkte gefunden</h3>
+            <p>Versuchen Sie einen anderen Filter</p>
+        </div>
+    </div>
+
+    <app-product-detail-modal *ngIf="showModal && selectedProduct" [product]="selectedProduct" (close)="closeModal()">
+    </app-product-detail-modal>
+</section>

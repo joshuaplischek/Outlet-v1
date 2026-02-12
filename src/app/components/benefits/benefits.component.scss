@@ -1,0 +1,83 @@
+.benefits {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent-blue-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.benefit-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+
+    &:hover {
+        border-color: var(--color-accent-blue);
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+
+        .benefit-icon {
+            transform: scale(1.1);
+            color: var(--color-accent-blue-light);
+        }
+    }
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    color: var(--color-accent-blue);
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+
+    ::ng-deep svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.benefit-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.benefit-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .benefit-card {
+        padding: var(--spacing-lg);
+    }
+}

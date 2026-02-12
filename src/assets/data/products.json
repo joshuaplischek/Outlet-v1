@@ -1,0 +1,149 @@
+[
+    {
+        "id": "f001",
+        "name": "Kunststofffenster 120x150cm Weiß",
+        "category": "Fenster",
+        "price": 299,
+        "images": [
+            "assets/images/products/fenster-1.jpg"
+        ],
+        "condition": "Neuwertig - Ausstellungsstück",
+        "description": "Hochwertiges Kunststofffenster in Weiß mit 3-fach Verglasung. Energieeffizient und schalldämmend. Ideal für Wohnräume.",
+        "specifications": {
+            "Breite": "120 cm",
+            "Höhe": "150 cm",
+            "Verglasung": "3-fach",
+            "Material": "Kunststoff",
+            "Farbe": "Weiß",
+            "U-Wert": "0.9 W/(m²K)"
+        },
+        "pos": 1,
+        "available": true
+    },
+    {
+        "id": "f002",
+        "name": "Holzfenster 100x120cm Eiche",
+        "category": "Fenster",
+        "price": 449,
+        "images": [
+            "assets/images/products/fenster-2.jpg"
+        ],
+        "condition": "Sehr gut - Leichte Gebrauchsspuren",
+        "description": "Elegantes Holzfenster aus Eiche mit 2-fach Verglasung. Natürliches Design mit hervorragender Wärmedämmung.",
+        "specifications": {
+            "Breite": "100 cm",
+            "Höhe": "120 cm",
+            "Verglasung": "2-fach",
+            "Material": "Eiche",
+            "Farbe": "Natur",
+            "U-Wert": "1.1 W/(m²K)"
+        },
+        "pos": 2,
+        "available": true
+    },
+    {
+        "id": "b001",
+        "name": "Balkontür 90x210cm Anthrazit",
+        "category": "Balkontür",
+        "price": 599,
+        "images": [
+            "assets/images/products/balkon-1.jpg"
+        ],
+        "condition": "Neuwertig - Rückläufer",
+        "description": "Moderne Balkontür in Anthrazit mit Sicherheitsverglasung. Inklusive Griff und Beschlägen.",
+        "specifications": {
+            "Breite": "90 cm",
+            "Höhe": "210 cm",
+            "Verglasung": "3-fach Sicherheitsglas",
+            "Material": "Kunststoff",
+            "Farbe": "Anthrazit",
+            "U-Wert": "0.8 W/(m²K)"
+        },
+        "pos": 3,
+        "available": true
+    },
+    {
+        "id": "b002",
+        "name": "Balkontür 100x220cm Weiß",
+        "category": "Balkontür",
+        "price": 549,
+        "images": [
+            "assets/images/products/balkon-2.jpg"
+        ],
+        "condition": "Gut - Kleine Kratzer am Rahmen",
+        "description": "Klassische weiße Balkontür mit guter Wärmedämmung. Perfekt für Standardöffnungen.",
+        "specifications": {
+            "Breite": "100 cm",
+            "Höhe": "220 cm",
+            "Verglasung": "2-fach",
+            "Material": "Kunststoff",
+            "Farbe": "Weiß",
+            "U-Wert": "1.0 W/(m²K)"
+        },
+        "pos": 4,
+        "available": true
+    },
+    {
+        "id": "h001",
+        "name": "Haustür Aluminium 110x210cm Grau",
+        "category": "Haustür",
+        "price": 899,
+        "images": [
+            "assets/images/products/haustuer-1.jpg"
+        ],
+        "condition": "Neuwertig - Ausstellungsstück",
+        "description": "Hochwertige Aluminium-Haustür mit Sicherheitsschloss und Wärmeschutz. Modernes Design in elegantem Grau.",
+        "specifications": {
+            "Breite": "110 cm",
+            "Höhe": "210 cm",
+            "Material": "Aluminium",
+            "Farbe": "Grau",
+            "Sicherheit": "RC2",
+            "U-Wert": "0.9 W/(m²K)"
+        },
+        "pos": 5,
+        "available": true
+    },
+    {
+        "id": "h002",
+        "name": "Haustür Holz 100x200cm Nussbaum",
+        "category": "Haustür",
+        "price": 1199,
+        "images": [
+            "assets/images/products/haustuer-2.jpg"
+        ],
+        "condition": "Sehr gut - Minimale Gebrauchsspuren",
+        "description": "Exklusive Holz-Haustür aus Nussbaum. Zeitloses Design mit erstklassiger Verarbeitung.",
+        "specifications": {
+            "Breite": "100 cm",
+            "Höhe": "200 cm",
+            "Material": "Nussbaum massiv",
+            "Farbe": "Nussbaum",
+            "Sicherheit": "RC2",
+            "U-Wert": "1.0 W/(m²K)"
+        },
+        "pos": 6,
+        "available": true
+    },
+    {
+        "id": "f003",
+        "name": "Dachfenster 78x118cm",
+        "category": "Fenster",
+        "price": 349,
+        "images": [
+            "assets/images/products/fenster-3.jpg"
+        ],
+        "condition": "Gut - Funktionsfähig",
+        "description": "Praktisches Dachfenster mit Schwingfunktion. Ideal für Dachgeschossausbau.",
+        "specifications": {
+            "Breite": "78 cm",
+            "Höhe": "118 cm",
+            "Verglasung": "2-fach",
+            "Material": "Kunststoff",
+            "Typ": "Schwingfenster",
+            "U-Wert": "1.1 W/(m²K)"
+        },
+        "pos": 7,
+        "available": true
+    }
+]

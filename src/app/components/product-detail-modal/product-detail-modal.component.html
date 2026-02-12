@@ -1,0 +1,79 @@
+<div class="modal-backdrop" (click)="onBackdropClick($event)">
+    <div class="modal-content">
+        <button class="modal-close" (click)="closeModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+
+        <div class="modal-body">
+            <div class="modal-image-section">
+                <div class="image-container">
+                    <img [src]="currentImage" [alt]="product.name" />
+
+                    <button *ngIf="product.images.length > 1 && currentImageIndex > 0" class="image-nav prev"
+                        (click)="previousImage()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+
+                    <button *ngIf="product.images.length > 1 && currentImageIndex < product.images.length - 1"
+                        class="image-nav next" (click)="nextImage()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="image-indicators" *ngIf="product.images.length > 1">
+                    <span *ngFor="let img of product.images; let i = index" class="indicator"
+                        [class.active]="i === currentImageIndex" (click)="currentImageIndex = i">
+                    </span>
+                </div>
+            </div>
+
+            <div class="modal-info-section">
+                <div class="product-header">
+                    <span class="product-category">{{ product.category }}</span>
+                    <h2 class="product-title">{{ product.name }}</h2>
+                    <p class="product-condition">{{ product.condition }}</p>
+                </div>
+
+                <div class="product-price-section">
+                    <span class="price-label">Preis</span>
+                    <span class="price-amount">{{ product.price }}€</span>
+                </div>
+
+                <div class="product-description">
+                    <h3>Beschreibung</h3>
+                    <p>{{ product.description }}</p>
+                </div>
+
+                <div class="product-specifications">
+                    <h3>Technische Daten</h3>
+                    <div class="spec-grid">
+                        <div class="spec-item" *ngFor="let spec of specificationEntries">
+                            <span class="spec-label">{{ spec.key }}</span>
+                            <span class="spec-value">{{ spec.value }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-inquiry" (click)="openInquiryForm()">
+                    Jetzt anfragen
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <app-inquiry-form *ngIf="showInquiryForm" [product]="product" (close)="closeInquiryForm()">
+    </app-inquiry-form>
+</div>

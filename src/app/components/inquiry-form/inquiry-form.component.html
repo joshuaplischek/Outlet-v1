@@ -1,0 +1,91 @@
+<div class="form-backdrop" (click)="onBackdropClick($event)">
+    <div class="form-container">
+        <button class="form-close" (click)="closeForm()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+
+        <div class="form-header">
+            <h2>Anfrage senden</h2>
+            <p>{{ product.name }}</p>
+        </div>
+
+        <form [formGroup]="inquiryForm" (ngSubmit)="onSubmit()" *ngIf="!submitSuccess">
+            <div class="form-group">
+                <label for="fullName">Vollständiger Name *</label>
+                <input type="text" id="fullName" formControlName="fullName"
+                    [class.error]="f['fullName'].invalid && f['fullName'].touched" placeholder="Max Mustermann">
+                <span class="error-message" *ngIf="f['fullName'].invalid && f['fullName'].touched">
+                    Bitte geben Sie Ihren vollständigen Namen ein
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input type="email" id="email" formControlName="email"
+                    [class.error]="f['email'].invalid && f['email'].touched" placeholder="max@beispiel.de">
+                <span class="error-message" *ngIf="f['email'].invalid && f['email'].touched">
+                    Bitte geben Sie eine gültige E-Mail-Adresse ein
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefonnummer (Optional)</label>
+                <input type="tel" id="phone" formControlName="phone" placeholder="+49 123 456789">
+            </div>
+
+            <div class="form-group">
+                <label>Lieferoption *</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" formControlName="deliveryOption" value="Selbstabholung">
+                        <span>Selbstabholung</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" formControlName="deliveryOption" value="Lieferung">
+                        <span>Lieferung</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" formControlName="privacyAccepted"
+                        [class.error]="f['privacyAccepted'].invalid && f['privacyAccepted'].touched">
+                    <span>
+                        Ich habe die <a routerLink="/datenschutz" target="_blank">Datenschutzerklärung</a> gelesen und
+                        akzeptiert *
+                    </span>
+                </label>
+                <span class="error-message" *ngIf="f['privacyAccepted'].invalid && f['privacyAccepted'].touched">
+                    Sie müssen die Datenschutzerklärung akzeptieren
+                </span>
+            </div>
+
+            <div class="error-banner" *ngIf="submitError">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                Fehler beim Senden der Anfrage. Bitte versuchen Sie es später erneut.
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" [disabled]="isSubmitting">
+                <span *ngIf="!isSubmitting">Anfrage senden</span>
+                <span *ngIf="isSubmitting">Wird gesendet...</span>
+            </button>
+        </form>
+
+        <div class="success-message" *ngIf="submitSuccess">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <h3>Anfrage erfolgreich gesendet!</h3>
+            <p>Wir werden uns in Kürze bei Ihnen melden.</p>
+        </div>
+    </div>
+</div>

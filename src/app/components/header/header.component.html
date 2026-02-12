@@ -1,0 +1,30 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="container">
+        <nav class="nav">
+            <a routerLink="/" class="logo">
+                <span class="logo-text">Fenster</span>
+                <span class="logo-accent">preiswert</span>
+                <span class="logo-tag">OUTLET</span>
+            </a>
+
+            <button class="burger-menu" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" [class.active]="isMenuOpen">
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    (click)="closeMenu()">
+                    Home
+                </a>
+                <a routerLink="/impressum" routerLinkActive="active" (click)="closeMenu()">
+                    Impressum
+                </a>
+                <a routerLink="/datenschutz" routerLinkActive="active" (click)="closeMenu()">
+                    Datenschutz
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
