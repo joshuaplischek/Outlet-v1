@@ -1,0 +1,22 @@
+<section class="faq section" id="faq">
+    <div class="container">
+        <div class="text-center mb-xl">
+            <h2 class="section-title">Häufige Fragen (Q&A)</h2>
+            <p class="section-subtitle">Alles, was Sie über unsere Fenster und den Ablauf wissen müssen</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item" *ngFor="let faq of faqs; let i = index" [class.active]="activeIndex === i">
+                <button class="faq-question" (click)="toggleFaq(i)" [attr.aria-expanded]="activeIndex === i">
+                    <span>{{ faq.question }}</span>
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

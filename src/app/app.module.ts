@@ -18,6 +18,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductDetailModalComponent } from './components/product-detail-modal/product-detail-modal.component';
 import { InquiryFormComponent } from './components/inquiry-form/inquiry-form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
@@ -35,6 +36,7 @@ import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component'
         ProductDetailModalComponent,
         InquiryFormComponent,
         FooterComponent,
+        FaqComponent,
         HomeComponent,
         ImpressumComponent,
         DatenschutzComponent
