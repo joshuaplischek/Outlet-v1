@@ -49,7 +49,9 @@ import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component'
             anchorScrolling: 'enabled'
         })
     ],
-    providers: [],
+    providers: [
+        provideHttpClient()
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

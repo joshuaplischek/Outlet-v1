@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../../models/product.model';
 import { EmailService } from '../../services/email.service';
@@ -29,6 +29,10 @@ export class InquiryFormComponent {
             deliveryOption: ['Selbstabholung', Validators.required],
             privacyAccepted: [false, Validators.requiredTrue]
         });
+    }
+
+    ngOnInit(): void {
+        console.log('InquiryFormComponent initialized for product:', this.product);
     }
 
     get f() {

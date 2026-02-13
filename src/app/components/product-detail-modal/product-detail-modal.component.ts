@@ -43,6 +43,7 @@ export class ProductDetailModalComponent {
     }
 
     openInquiryForm(): void {
+        console.log('Opening inquiry form for product:', this.product.name);
         this.showInquiryForm = true;
     }
 

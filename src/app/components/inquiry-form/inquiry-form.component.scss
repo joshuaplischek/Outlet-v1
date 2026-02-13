@@ -1,3 +1,9 @@
+:host {
+    position: relative;
+    z-index: 4000;
+    display: block;
+}
+
 .form-backdrop {
     position: fixed;
     top: 0;
