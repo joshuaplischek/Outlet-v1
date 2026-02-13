@@ -1,5 +1,4 @@
 [
-
     Fenster: 
     {
         "id": "f001",
@@ -68,5 +67,4 @@
         "pos": 5,
         "available": true
     },
-
 ]
