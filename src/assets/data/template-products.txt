@@ -1,0 +1,72 @@
+[
+
+    Fenster: 
+    {
+        "id": "f001",
+        "name": "Kunststofffenster 120x150cm Weiß",
+        "category": "Fenster",
+        "price": 299,
+        "images": [
+            "assets/images/products/fenster-1.jpg"
+        ],
+        "condition": "Neuwertig - Ausstellungsstück",
+        "description": "Hochwertiges Kunststofffenster in Weiß mit 3-fach Verglasung. Energieeffizient und schalldämmend. Ideal für Wohnräume.",
+        "specifications": {
+            "Breite": "120 cm",
+            "Höhe": "150 cm",
+            "Verglasung": "3-fach",
+            "Material": "Kunststoff",
+            "Farbe": "Weiß",
+            "U-Wert": "0.9 W/(m²K)"
+        },
+        "pos": 1,
+        "available": true
+    },
+
+    Balkontür: 
+    {
+        "id": "b001",
+        "name": "Balkontür Weiß 97,5x223,5cm",
+        "category": "Balkontür",
+        "price": 599,
+        "images": [
+            "/assets/img/products/balkon/balkon 01/1.png"
+        ],
+        "condition": "Neu - Fehlbestellung",
+        "description": "Große Balkontür mit 2-fach Verglasung. Ideal für Wohnräume.",
+        "specifications": {
+            "Breite": "97,5 cm",
+            "Höhe": "223,5 cm",
+            "Verglasung": "2-fach",
+            "Material": "Kunststoff",
+            "Farbe": "Weiß",
+            "U-Wert": "1,26 W/(m²K)"
+        },
+        "pos": 3,
+        "available": true
+    },
+
+    Haustür: 
+    {
+        "id": "h001",
+        "name": "Haustür Aluminium 110x210cm Grau",
+        "category": "Haustür",
+        "price": 899,
+        "images": [
+            "assets/images/products/haustuer-1.jpg"
+        ],
+        "condition": "Neuwertig - Ausstellungsstück",
+        "description": "Hochwertige Aluminium-Haustür mit Sicherheitsschloss und Wärmeschutz. Modernes Design in elegantem Grau.",
+        "specifications": {
+            "Breite": "110 cm",
+            "Höhe": "210 cm",
+            "Material": "Aluminium",
+            "Farbe": "Grau",
+            "Sicherheit": "RC2",
+            "U-Wert": "0.9 W/(m²K)"
+        },
+        "pos": 5,
+        "available": true
+    },
+
+]
