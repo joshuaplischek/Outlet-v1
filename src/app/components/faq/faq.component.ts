@@ -9,7 +9,7 @@ export class FaqComponent {
     faqs = [
         {
             question: 'Wo muss ich meine Bestellung abholen?',
-            answer: 'Sie können Ihre Bestellung direkt an unserem Lager in der Hauptort 8B, 56457 Halbs abholen. Bitte vereinbaren Sie vorab einen Termin, damit wir Ihre Ware für die Verladung bereitstellen können.'
+            answer: 'Sie können Ihre Bestellung direkt an unserem Lager in der Hauptstraße 8B, 56457 Halbs abholen. Bitte vereinbaren Sie vorab einen Termin, damit wir Ihre Ware für die Verladung bereitstellen können.'
         },
         {
             question: 'Bis wohin liefern Sie und was kostet der Versand?',
@@ -17,11 +17,11 @@ export class FaqComponent {
         },
         {
             question: 'Wie lange ist die Lieferzeit?',
-            answer: 'Lagerware ist sofort verfügbar und kann kurzfristig abgeholt oder versendet werden. Bei Sonderanfertigungen beträgt die Lieferzeit in der Regel zwischen 4 und 6 Wochen.'
+            answer: 'Lagerware ist sofort verfügbar und kann kurzfristig abgeholt oder versendet werden. Bei Sonderanfertigungen beträgt die Lieferzeit in der Regel zwischen 2 und 3 Wochen.'
         },
         {
             question: 'Sind die Fenster neu oder gebraucht?',
-            answer: 'Wir verkaufen ausschließlich Neuware. Unsere Produkte stammen meist aus Überproduktionen, Fehlplanungen oder Restposten namhafter Hersteller, die wir zu Outlet-Preisen anbieten.'
+            answer: 'Wir verkaufen Ware, welche Beispielsweise falsch geliefert oder falsch bestellt wurde. Diese Ware ist Neuware und unbenutzt. Es gibt aber auch gebrauchte Produkte. Den Zustand der Ware können Sie den Bildern und der Produktbeschreibung entnehmen.'
         },
         {
             question: 'Bieten Sie auch die Montage der Bauelemente an?',
