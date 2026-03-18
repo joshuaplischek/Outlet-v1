@@ -11,6 +11,7 @@
     background-clip: text;
 }
 
+// Kategoriefilter-Buttons
 .filters {
     display: flex;
     gap: var(--spacing-md);
@@ -43,12 +44,117 @@
     }
 }
 
+// Material + Sort Zeile
+.filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.material-filters {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.filter-chip {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+        border-color: var(--color-accent-blue);
+        color: var(--color-text-primary);
+    }
+
+    &.active {
+        background: rgba(0, 102, 255, 0.15);
+        border-color: var(--color-accent-blue);
+        color: var(--color-accent-blue-light);
+    }
+}
+
+// Aktive Filter Anzeige
+.active-filters {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.active-filters-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.reset-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+        color: var(--color-text-primary);
+        border-color: var(--color-text-secondary);
+    }
+}
+
+// Sortierung
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.sort-select {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-accent-blue);
+    }
+
+    option {
+        background: var(--color-bg-secondary);
+        color: var(--color-text-primary);
+    }
+}
+
+// Produktgrid
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--spacing-xl);
 }
 
+// Empty State
 .empty-state {
     text-align: center;
     padding: var(--spacing-3xl) var(--spacing-lg);
@@ -71,6 +177,60 @@
     }
 }
 
+// Load More Button
+.load-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.btn-load-more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--color-accent-blue);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+
+    &:hover {
+        background: var(--color-accent-blue);
+        box-shadow: var(--shadow-glow-blue);
+    }
+}
+
+// Teaser CTA
+.teaser-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    background: var(--color-accent-blue);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-glow-blue);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+    }
+}
+
 @media (max-width: 768px) {
     .products-grid {
         grid-template-columns: 1fr;
@@ -83,5 +243,18 @@
     .filter-btn {
         padding: var(--spacing-xs) var(--spacing-md);
         font-size: var(--font-size-sm);
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sort-control {
+        width: 100%;
+
+        .sort-select {
+            flex: 1;
+        }
     }
 }

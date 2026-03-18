@@ -2,26 +2,87 @@
     <div class="container">
         <h2 class="section-title text-center mb-lg">Unser Outlet</h2>
 
-        <div class="filters mb-xl">
-            <button *ngFor="let filter of filters" class="filter-btn" [class.active]="selectedFilter === filter.value"
-                (click)="filterProducts(filter.value)">
-                {{ filter.label }}
-            </button>
-        </div>
+        <!-- Full mode: Kategorie- + Materialfilter + Sortierung -->
+        <ng-container *ngIf="mode === 'full'">
+            <div class="filters mb-md">
+                <button
+                    *ngFor="let filter of categoryFilters"
+                    class="filter-btn"
+                    [class.active]="selectedCategory === filter.value"
+                    (click)="filterByCategory(filter.value)">
+                    {{ filter.label }}
+                </button>
+            </div>
 
+            <div class="filter-row mb-xl">
+                <div class="material-filters">
+                    <span class="filter-label">Material:</span>
+                    <button
+                        *ngFor="let mat of materialFilters"
+                        class="filter-chip"
+                        [class.active]="selectedMaterial === mat.value"
+                        (click)="filterByMaterial(mat.value)">
+                        {{ mat.label }}
+                    </button>
+                </div>
+
+                <div class="sort-control">
+                    <label class="filter-label" for="sort-select">Sortierung:</label>
+                    <select id="sort-select" class="sort-select" [value]="selectedSort" (change)="sortBy($any($event.target).value)">
+                        <option *ngFor="let opt of sortOptions" [value]="opt.value">{{ opt.label }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="active-filters mb-md" *ngIf="hasActiveFilters">
+                <span class="active-filters-label">Aktive Filter:</span>
+                <span class="filter-chip active" *ngIf="selectedCategory !== 'ALLE'">
+                    {{ selectedCategory }}
+                </span>
+                <span class="filter-chip active" *ngIf="selectedMaterial !== 'ALLE'">
+                    {{ selectedMaterial }}
+                </span>
+                <button class="reset-btn" (click)="resetFilters()">Filter zurücksetzen</button>
+            </div>
+        </ng-container>
+
+        <!-- Produktgrid -->
         <div class="products-grid">
-            <app-product-card *ngFor="let product of products$ | async" [product]="product"
+            <app-product-card
+                *ngFor="let product of displayedProducts"
+                [product]="product"
                 (click)="openProductDetail(product)">
             </app-product-card>
         </div>
 
-        <div class="empty-state" *ngIf="(products$ | async)?.length === 0">
+        <!-- Empty State -->
+        <div class="empty-state" *ngIf="displayedProducts.length === 0">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.35-4.35" />
             </svg>
             <h3>Keine Produkte gefunden</h3>
             <p>Versuchen Sie einen anderen Filter</p>
+        </div>
+
+        <!-- Load More (nur full mode) -->
+        <div class="load-more-wrapper" *ngIf="mode === 'full' && hasMore">
+            <button class="btn-load-more" (click)="loadMore()">
+                Mehr laden
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- CTA (nur teaser mode) -->
+        <div class="teaser-cta" *ngIf="mode === 'teaser'">
+            <a class="btn-cta" routerLink="/outlet">
+                Alle Produkte ansehen
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
         </div>
     </div>
 
