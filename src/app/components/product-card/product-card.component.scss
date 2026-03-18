@@ -81,7 +81,18 @@
 .product-condition {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.product-dimensions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
     margin-bottom: var(--spacing-md);
+
+    svg { flex-shrink: 0; opacity: 0.6; }
 }
 
 .product-footer {
@@ -93,6 +104,15 @@
 }
 
 .product-price {
+    display: flex;
+    flex-direction: column;
+
+    .price-vat {
+        font-size: var(--font-size-xs, 0.7rem);
+        color: var(--color-text-muted);
+        margin-top: 2px;
+    }
+
     .price-amount {
         font-size: var(--font-size-2xl);
         font-weight: 700;

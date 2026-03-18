@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -48,6 +48,7 @@ import { OutletComponent } from './pages/outlet/outlet.component';
         BrowserAnimationsModule,
         CommonModule,
         ReactiveFormsModule,
+        FormsModule,
         RouterModule.forRoot(routes, {
             scrollPositionRestoration: 'top',
             anchorScrolling: 'enabled'

@@ -1,0 +1,9 @@
+{
+    "/outlet-api": {
+        "target": "https://api-products-outlet.fensterpreiswert.de",
+        "changeOrigin": true,
+        "pathRewrite": { "^/outlet-api": "" },
+        "secure": true,
+        "logLevel": "debug"
+    }
+}
