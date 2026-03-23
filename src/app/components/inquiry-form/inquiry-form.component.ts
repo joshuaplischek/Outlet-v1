@@ -27,6 +27,7 @@ export class InquiryFormComponent {
             email: ['', [Validators.required, Validators.email]],
             phone: [''],
             deliveryOption: ['Selbstabholung', Validators.required],
+            requestOriginalImages: [false],
             privacyAccepted: [false, Validators.requiredTrue]
         });
     }
@@ -57,7 +58,8 @@ export class InquiryFormComponent {
             email: this.f['email'].value,
             phone: this.f['phone'].value,
             deliveryOption: this.f['deliveryOption'].value,
-            privacyAccepted: this.f['privacyAccepted'].value
+            privacyAccepted: this.f['privacyAccepted'].value,
+            requestOriginalImages: this.f['requestOriginalImages'].value
         };
 
         try {

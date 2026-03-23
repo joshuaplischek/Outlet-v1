@@ -19,7 +19,8 @@ export class EmailService {
                 customer_name: inquiryData.fullName,
                 customer_email: inquiryData.email,
                 customer_phone: inquiryData.phone || 'Nicht angegeben',
-                delivery_option: inquiryData.deliveryOption
+                delivery_option: inquiryData.deliveryOption,
+                request_original_images: inquiryData.requestOriginalImages ? 'Ja' : 'Nein'
             };
 
             await lastValueFrom(this.http.post(this.API_URL, payload));

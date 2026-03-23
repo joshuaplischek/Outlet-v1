@@ -58,7 +58,7 @@ export class ProductService {
     private mapCategory(typ: string): ProductCategory {
         if (typ === 'Fenster') return 'Fenster';
         if (typ === 'Balkon') return 'Balkontür';
-        if (typ === 'Haustür') return 'Haustür';
+        if (typ === 'Haustür' || typ === 'Tür') return 'Haustür';
         return 'Fenster';
     }
 

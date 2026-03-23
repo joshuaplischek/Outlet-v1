@@ -84,6 +84,18 @@
     margin-bottom: var(--spacing-xs);
 }
 
+.images-notice {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--font-size-xs, 0.7rem);
+    color: var(--color-accent-blue);
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.85;
+
+    svg { flex-shrink: 0; }
+}
+
 .product-dimensions {
     display: flex;
     align-items: center;

@@ -23,4 +23,5 @@ export interface InquiryData {
     phone?: string;
     deliveryOption: 'Lieferung' | 'Selbstabholung';
     privacyAccepted: boolean;
+    requestOriginalImages?: boolean;
 }
