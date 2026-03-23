@@ -10,8 +10,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
     z-index: 3000;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@
         }
 
         &.error {
-            border-color: #ff4444;
+            border-color: var(--color-error);
         }
 
         &::placeholder {
@@ -153,7 +153,7 @@
             flex-shrink: 0;
 
             &.error {
-                outline: 2px solid #ff4444;
+                outline: 2px solid var(--color-error);
             }
         }
 
@@ -183,7 +183,7 @@
     border: 1px solid rgba(255, 160, 0, 0.4);
     border-radius: var(--radius-sm);
     font-size: var(--font-size-sm);
-    color: #ffa000;
+    color: var(--color-warning);
     margin-top: var(--spacing-sm);
 
     svg { flex-shrink: 0; margin-top: 2px; }
@@ -193,7 +193,7 @@
     display: block;
     margin-top: var(--spacing-xs);
     font-size: var(--font-size-sm);
-    color: #ff4444;
+    color: var(--color-error);
 }
 
 .error-banner {
@@ -202,9 +202,9 @@
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
     background: rgba(255, 68, 68, 0.1);
-    border: 1px solid #ff4444;
+    border: 1px solid var(--color-error);
     border-radius: var(--radius-md);
-    color: #ff4444;
+    color: var(--color-error);
     font-size: var(--font-size-sm);
     margin-bottom: var(--spacing-lg);
 

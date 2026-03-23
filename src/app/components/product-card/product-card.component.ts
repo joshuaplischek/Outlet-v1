@@ -9,6 +9,8 @@ import { Product } from '../../models/product.model';
 export class ProductCardComponent {
     @Input() product!: Product;
 
+    readonly fallbackImage = '/assets/img/products/ex/fenster/pvc/2-glass/Weiß.png';
+
     get primaryImage(): string {
         return this.product.images[0] || 'assets/images/placeholder.jpg';
     }

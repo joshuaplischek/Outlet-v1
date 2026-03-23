@@ -1,6 +1,6 @@
 <div class="product-card">
     <div class="product-image">
-        <img [src]="primaryImage" [alt]="product.name" />
+        <img #productImg [src]="primaryImage" [alt]="product.name" (error)="productImg.src=fallbackImage" />
         <div class="product-badge" [ngClass]="badgeClass">{{ product.category }}</div>
     </div>
 

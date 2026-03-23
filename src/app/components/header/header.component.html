@@ -23,7 +23,7 @@
                 <a routerLink="/outlet" routerLinkActive="active" (click)="closeMenu()">
                     Outlet
                 </a>
-                <a [routerLink]="['/']" fragment="faq" (click)="closeMenu()">
+                <a (click)="navigateToFaq()" style="cursor:pointer">
                     FAQ
                 </a>
                 <a routerLink="/impressum" routerLinkActive="active" (click)="closeMenu()">

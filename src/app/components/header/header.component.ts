@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent {
     isScrolled = false;
     isMenuOpen = false;
 
-    constructor() {
+    constructor(private router: Router) {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', () => {
                 this.isScrolled = window.scrollY > 50;
@@ -29,5 +30,18 @@ export class HeaderComponent {
     closeMenu(): void {
         this.isMenuOpen = false;
         document.body.style.overflow = '';
+    }
+
+    navigateToFaq(): void {
+        this.closeMenu();
+        if (this.router.url === '/') {
+            document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            this.router.navigate(['/'], { fragment: 'faq' }).then(() => {
+                setTimeout(() => {
+                    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+                }, 150);
+            });
+        }
     }
 }

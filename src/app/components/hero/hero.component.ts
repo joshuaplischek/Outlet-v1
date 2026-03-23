@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
     templateUrl: './hero.component.html',
     styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent { }
+export class HeroComponent {
+    scrollToBenefits(event: Event): void {
+        event.preventDefault();
+        document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+    }
+}

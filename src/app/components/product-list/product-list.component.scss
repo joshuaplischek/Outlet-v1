@@ -40,7 +40,7 @@
     border: 1px solid rgba(255, 160, 0, 0.4);
     border-radius: var(--radius-sm);
     font-size: var(--font-size-sm);
-    color: #ffa000;
+    color: var(--color-warning);
 
     svg {
         flex-shrink: 0;
@@ -171,14 +171,28 @@
     gap: var(--spacing-sm);
 }
 
+.sort-select-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    svg {
+        position: absolute;
+        right: 10px;
+        pointer-events: none;
+        color: var(--color-text-secondary);
+    }
+}
+
 .sort-select {
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) 2.2rem var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-sm);
     color: var(--color-text-primary);
     background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     cursor: pointer;
+    appearance: none;
     transition: border-color var(--transition-fast);
 
     &:focus {
@@ -195,7 +209,7 @@
 // Produktgrid
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-xl);
 }
 
@@ -234,6 +248,25 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
+}
+
+.dim-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .dim-unit {
+        position: absolute;
+        right: 8px;
+        font-size: 0.7rem;
+        color: var(--color-text-muted);
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .dim-input {
+        padding-right: 2rem;
+    }
 }
 
 .dim-label {
@@ -304,7 +337,7 @@
         background: var(--color-accent-blue);
         border-color: var(--color-accent-blue);
         color: #fff;
-        box-shadow: var(--shadow-glow-blue);
+        box-shadow: var(--shadow-glow-blue), 0 0 0 3px rgba(0, 102, 255, 0.25);
     }
 
     &:disabled {
