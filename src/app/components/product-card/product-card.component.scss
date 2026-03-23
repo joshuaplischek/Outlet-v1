@@ -45,6 +45,10 @@
         border-radius: var(--radius-sm);
         font-size: var(--font-size-sm);
         font-weight: 600;
+
+        &.badge-fenster { background: var(--color-accent-blue); }
+        &.badge-balkon  { background: #0d9488; }
+        &.badge-haus    { background: #d97706; }
     }
 }
 
@@ -82,18 +86,6 @@
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xs);
-}
-
-.images-notice {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: var(--font-size-xs, 0.7rem);
-    color: var(--color-accent-blue);
-    margin-bottom: var(--spacing-xs);
-    opacity: 0.85;
-
-    svg { flex-shrink: 0; }
 }
 
 .product-dimensions {

@@ -13,6 +13,15 @@ export class ProductCardComponent {
         return this.product.images[0] || 'assets/images/placeholder.jpg';
     }
 
+    get badgeClass(): string {
+        switch (this.product.category) {
+            case 'Fenster':    return 'badge-fenster';
+            case 'Balkontür':  return 'badge-balkon';
+            case 'Haustür':    return 'badge-haus';
+            default:           return '';
+        }
+    }
+
     get categoryIcon(): string {
         switch (this.product.category) {
             case 'Fenster':
